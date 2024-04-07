@@ -1,6 +1,6 @@
 from pymycobot.mycobot import MyCobot
 
-cobot = MyCobot("COM13", 115200)
+cobot = MyCobot("/dev/ttyACM0", 115200)
 
 print(cobot.is_controller_connected())
 cobot.set_color(255,0,0)
@@ -13,4 +13,4 @@ for i in range(1,7):
 while True:
     angle = input("joint, angle:")
     joint_id, angle = [int(x) for x in angle.split(', ')]
-    # cobot.send_angle(joint_id, angle, 20)
+    cobot.send_angle(joint_id, angle, 20)
