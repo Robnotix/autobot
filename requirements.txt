@@ -1,2 +1,4 @@
 pymycobot
 opencv-python
+pybotics
+numpy
